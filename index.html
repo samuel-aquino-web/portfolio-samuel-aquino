@@ -138,6 +138,11 @@ body{background:var(--paper);color:var(--ink)}
 .ticker{background:#1769ff;color:#fff;border-color:#1769ff}
 @media(max-width:980px){.hero.grid-bg{background-size:56px 56px}.hero-panel{box-shadow:9px 9px 0 #1769ff}}
 @media(max-width:620px){.hero-panel{box-shadow:6px 6px 0 #1769ff}}
+/* Menu móvel ocupa a tela inteira sem ficar preso no meio da animação */
+@media(max-width:980px){
+  .nav-links{transform:none;opacity:0;visibility:hidden;pointer-events:none;transition:opacity .18s ease,visibility 0s linear .18s}
+  .nav-links.open{transform:none;opacity:1;visibility:visible;pointer-events:auto;transition:opacity .18s ease}
+}
 </style>
 </head>
 <body>
