@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#10100f">
+  <meta name="description" content="Brasa 94: hamburgueria fictícia em uma demonstração interativa criada para o portfólio de Samuel Aquino.">
+  <title>Brasa 94 — O fogo dá o tom</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="demo-bar">PROJETO DEMONSTRATIVO <span aria-hidden="true">✦</span> MARCA, PREÇOS E PEDIDOS FICTÍCIOS</div>
+  <header class="header" id="inicio">
+    <div class="shell header-inner">
+      <a class="logo" href="#inicio" aria-label="Brasa 94, início">BRASA<span>94</span><b>.</b></a>
+      <nav class="nav" id="main-nav" aria-label="Navegação principal">
+        <a href="#inicio">Início</a><a href="#cardapio">Cardápio</a><a href="#preparo">O preparo</a>
+      </nav>
+      <div class="header-actions"><a class="menu-shortcut" href="#cardapio">VER CARDÁPIO <span aria-hidden="true">↗</span></a><button class="bag-trigger" id="open-bag" type="button" aria-label="Abrir sacola"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8.5h15l1 11h-17l1-11Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/></svg><span>SACOLA</span><span class="bag-count">0</span></button><button class="nav-toggle" id="nav-toggle" type="button" aria-controls="main-nav" aria-expanded="false" aria-label="Abrir menu"><span></span><span></span><span></span></button></div>
+    </div>
+  </header>
+  <main>
+    <section class="hero" aria-labelledby="hero-heading" tabindex="-1">
+      <div class="hero-glow" aria-hidden="true"></div>
+      <div class="smoke-field" aria-hidden="true"><img class="smoke smoke-left" src="assets/smoke.png" alt=""><img class="smoke smoke-right" src="assets/smoke.png" alt=""></div>
+      <div class="hero-grid shell">
+        <div class="hero-product" id="hero-product" data-burger="duplo"><div class="hero-word" aria-hidden="true">BRASA</div><img class="hero-base-image" id="hero-image" src="assets/brasa-duplo.png" alt="Hambúrguer Brasa Duplo" fetchpriority="high"><div class="exploded-stack" id="exploded-stack" role="img" aria-label="Ingredientes do Brasa Duplo separados em camadas" aria-hidden="true"><img class="layer layer-1" src="assets/brasa-duplo-camadas.png" alt=""><img class="layer layer-2" src="assets/brasa-duplo-camadas.png" alt=""><img class="layer layer-3" src="assets/brasa-duplo-camadas.png" alt=""><img class="layer layer-4" src="assets/brasa-duplo-camadas.png" alt=""><img class="layer layer-5" src="assets/brasa-duplo-camadas.png" alt=""></div><span class="product-shadow" aria-hidden="true"></span><button class="layers-toggle" id="layers-toggle" type="button" aria-pressed="false"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3 8 9-5 9 5-9 5-9-5Z"/><path d="m3 12 9 5 9-5M3 16l9 5 9-5"/></svg><span>VER EM CAMADAS</span></button></div>
+        <div class="hero-selection" aria-label="Escolher hambúrguer"><span class="selection-label">ESCOLHA SEU BURGER</span><div class="selection-options" id="selection-options"></div><div class="slide-controls"><button type="button" id="previous-burger" aria-label="Hambúrguer anterior"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m14 5-7 7 7 7M7 12h13"/></svg></button><span id="slide-position">01 / 03</span><button type="button" id="next-burger" aria-label="Próximo hambúrguer"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m10 5 7 7-7 7M17 12H4"/></svg></button></div></div>
+        <div class="hero-details"><div class="hero-index" id="hero-index">01 / 03</div><div><span class="eyebrow" id="hero-category">O ORIGINAL DA CASA</span><h1 id="hero-heading">BRASA<br>DUPLO</h1><p id="hero-description">Dois smash burgers, cheddar derretido, picles e molho da casa no pão brioche.</p><div class="hero-purchase"><button class="primary-button hero-add" id="hero-add" type="button"><span class="hero-add-label"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4.5 8.5h15l1 11h-17l1-11Z"/><path d="M9 9V6a3 3 0 0 1 6 0v3"/><path d="M12 12v5m-2.5-2.5h5"/></svg><span>ADICIONAR À SACOLA</span></span><strong id="hero-price">R$ 39</strong></button></div></div></div>
+      </div>
+      <a href="#cardapio" class="scroll-cue">DESLIZE PARA EXPLORAR <span aria-hidden="true">↓</span></a>
+    </section>
+
+    <div class="ticker" aria-hidden="true"><div>CHAPA QUENTE <span>✦</span> PÃO MACIO <span>✦</span> MUITO SABOR <span>✦</span> CHAPA QUENTE <span>✦</span> PÃO MACIO <span>✦</span> MUITO SABOR <span>✦</span></div></div>
+
+    <section class="menu-section section" id="cardapio" aria-labelledby="menu-heading"><div class="shell"><div class="section-top reveal"><div><span class="eyebrow">01 / OS PROTAGONISTAS</span><h2 id="menu-heading">A ESCOLHA<br>É <em>SUA.</em></h2></div><p>Conheça os três sabores e monte um pedido de exemplo.</p></div><div class="menu-tools"><div class="filter-list" role="group" aria-label="Filtrar cardápio"><button type="button" class="active" data-filter="todos" aria-pressed="true">TODOS</button><button type="button" data-filter="carne" aria-pressed="false">CARNE</button><button type="button" data-filter="frango" aria-pressed="false">FRANGO</button></div><label class="search-wrap"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="10.8" cy="10.8" r="6.5"/><path d="m16 16 5 5"/></svg><span class="sr-only">Buscar no cardápio</span><input id="menu-search" type="search" placeholder="Buscar sabor" autocomplete="off"></label></div><div class="burger-grid" id="burger-grid"></div><p class="disclaimer">Valores ilustrativos. Nenhum pedido é enviado ou cobrado.</p></div></section>
+
+    <section class="process-section section" id="preparo" aria-labelledby="process-heading"><div class="shell process-layout"><div class="process-lead reveal"><span class="eyebrow">02 / DA PRIMEIRA À ÚLTIMA MORDIDA</span><h2 id="process-heading">O FOGO<br>FAZ A <em>DIFERENÇA.</em></h2><p>Uma história simples: pão macio, chapa quente e combinações que deixam cada ingrediente aparecer.</p><a href="#cardapio" class="text-link">ENCONTRE O SEU FAVORITO <span aria-hidden="true">↗</span></a></div><div class="process-steps"><article class="reveal"><span>01</span><div><h3>COMEÇA NA CHAPA</h3><p>O hambúrguer ganha crosta e mantém o centro suculento.</p></div></article><article class="reveal"><span>02</span><div><h3>ENCONTRO DE TEXTURAS</h3><p>Queijo, molho e complementos entram na medida certa.</p></div></article><article class="reveal"><span>03</span><div><h3>PRONTO PARA A PRIMEIRA MORDIDA</h3><p>O pão fecha a cena. O resto você descobre no cardápio.</p></div></article></div></div></section>
+
+    <section class="closing" aria-labelledby="closing-heading"><div class="shell closing-inner reveal"><span class="eyebrow">BRASA 94 / DEMONSTRAÇÃO</span><h2 id="closing-heading">BATEU<br><em>A FOME?</em></h2><a class="primary-button" href="#cardapio">ESCOLHER UM BURGER <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="footer"><div class="shell footer-inner"><a class="logo" href="#inicio">BRASA<span>94</span><b>.</b></a><p>Marca e informações fictícias. Projeto demonstrativo por Samuel Aquino Web.</p><a href="#inicio">VOLTAR AO TOPO ↑</a></div></footer>
+
+  <div class="bag-layer" id="bag-layer" hidden><div class="bag-backdrop" data-close-bag></div><aside class="bag-panel" role="dialog" aria-modal="true" aria-labelledby="bag-title"><div class="bag-head"><div><span class="eyebrow">BRASA 94 / DEMONSTRAÇÃO</span><h2 id="bag-title">SUA SACOLA</h2></div><button id="close-bag" type="button" aria-label="Fechar sacola">×</button></div><div class="bag-items" id="bag-items"></div><div class="bag-bottom"><div><span>TOTAL ILUSTRATIVO</span><strong id="bag-total">R$ 0</strong></div><button class="primary-button" id="finish-order" type="button">CONCLUIR SIMULAÇÃO <span aria-hidden="true">↗</span></button><small>Nenhum pedido será enviado ou cobrado.</small></div></aside></div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>
